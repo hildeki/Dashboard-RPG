@@ -23,6 +23,22 @@ botao.addEventListener('click', function() {
     // Adiciona na lista
     lista.appendChild(novoItem);
 
+    // Criação do botão de exclusão
+    const novoBotao = document.createElement('button');
+
+    // Texto de exclusão do botão
+    novoBotao.textContent = "X";
+
+    // Botão exclusão
+    novoItem.appendChild(novoBotao);
+
+    // Execução do botão de exclusão
+    novoBotao.addEventListener('click', function() {
+
+        //Exclusão do item
+        novoItem.remove();
+    })
+
     // Limpa input
     input.value = '';
-});
+});    
